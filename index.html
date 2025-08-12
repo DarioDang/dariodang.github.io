@@ -1,442 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dario's Portfolio</title>
-    <link rel="stylesheet" href="/static/style.css">
-    
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8P964J2EC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        gtag('config', 'G-S8P964J2EC');
-    </script>
-    
+  <!-- Primary SEO -->
+  <title>Dario Dang – Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Dario Dang, Data Analyst. Machine learning, geospatial analysis, PySpark, dashboards, and end-to-end analytics projects.">
+  <link rel="canonical" href="https://dariodang.github.io/">
+
+  <!-- Optional keywords (not critical for modern SEO) -->
+  <meta name="keywords" content="Dario Dang, Data Analyst, Data Science, Machine Learning, Geospatial, PySpark, SQL, Python, Portfolio">
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dario Dang – Data Analyst Portfolio">
+  <meta property="og:description" content="ML, geospatial, and analytics projects with Python, SQL, and PySpark.">
+  <meta property="og:url" content="https://dariodang.github.io/">
+  <meta property="og:image" content="https://dariodang.github.io/static/image/cover_section/slide7.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dario Dang – Data Analyst Portfolio">
+  <meta name="twitter:description" content="ML, geospatial, and analytics projects with Python, SQL, and PySpark.">
+  <meta name="twitter:image" content="https://dariodang.github.io/static/image/cover_section/slide7.jpg">
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="/static/image/about_section/profile.jpg" type="image/png">
+
+  <!-- Performance: Preload first hero image -->
+  <link rel="preload" as="image" href="/static/image/cover_section/slide7.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/style.css">
+
+  <!-- Google tag (gtag.js) – replace ID if you created a new GA4 property for GitHub Pages -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8P964J2EC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-S8P964J2EC');
+  </script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Dario Dang",
+    "url":"https://dariodang.github.io/",
+    "image":"https://dariodang.github.io/static/image/about_section/profile.jpg",
+    "jobTitle":"Data Scientist",
+    "sameAs":[
+      "https://github.com/DarioDang",
+      "https://www.linkedin.com/in/dario-dang-89049020a/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Dario Dang – Data Science Portfolio",
+    "url":"https://dariodang.github.io/"
+  }
+  </script>
 </head>
 <body>
 
-    <!-- ✅ Reusable Top Navbar -->
-    <nav class="topnav">
-        <a href="/">Home</a>
-        <a href="/#about">About</a>
-        <a href="/#projects">Projects</a>
-        <a href="/#certificates">Certificates</a>
-        <a href="/#activities">Activities</a>
-        <a href="https://github.com/DarioDang" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/dario-dang-89049020a/" target="_blank">LinkedIn</a>
-        <a href="/static/files/Dario_CV.pdf" download>MyCV</a>
-    </nav>
+  <!-- ✅ Reusable Top Navbar -->
+  <nav class="topnav">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#certificates">Certificates</a>
+    <a href="/#activities">Activities</a>
+    <a href="https://github.com/DarioDang" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/dario-dang-89049020a/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/static/files/Dario_CV.pdf" download>MyCV</a>
+  </nav>
 
-    <!-- ✅ Page Content -->
-    <div class="content">
-        
-    <div class="slideshow-container">
-        <!-- Slide 1 -->
-        <div class="mySlides is-current">
-            <img src="/static/image/cover_section/slide7.jpg" class="slide-img first-slide">
-            <div class="caption-text">
-                <h1>Hi, I'm Dario!</h1>
-            </div>
-        </div>
+  <!-- ✅ Page Content -->
+  <div class="content">
 
-        <!-- Slide 2 -->
-        <div class="mySlides">
-            <img src="/static/image/cover_section/slide5.jpg" class="slide-img">
-            <div class="caption-text">
-                <h1>Welcome to my <br> Data Science house</h1>
-            </div>
-        </div>
+    <!-- Single H1 for homepage SEO -->
+    <header class="visually-hidden">
+      <h1>Dario Dang – Data Analyst Portfolio</h1>
+    </header>
 
-        <!-- Slide 3 -->
-        <div class="mySlides">
-            <img src="/static/image/cover_section/slide8.jpg" class="slide-img">
-            <div class="caption-text">
-                <h1>You can find my work, thoughts, and ideas here</h1>
-            </div>
+    <div class="slideshow-container" aria-label="Hero slideshow">
+      <!-- Slide 1 -->
+      <div class="mySlides is-current">
+        <img src="/static/image/cover_section/slide7.jpg" class="slide-img first-slide" alt="Data visuals collage">
+        <div class="caption-text">
+          <h2>Hi, I'm Dario!</h2>
         </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="mySlides">
+        <img src="/static/image/cover_section/slide5.jpg" class="slide-img" alt="Abstract data science background">
+        <div class="caption-text">
+          <h2>Welcome to my<br>Data Science house</h2>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="mySlides">
+        <img src="/static/image/cover_section/slide8.jpg" class="slide-img" alt="Charts and analytics imagery">
+        <div class="caption-text">
+          <h2>Explore my work, thoughts, and ideas</h2>
+        </div>
+      </div>
     </div>
     <!-- Arrows -->
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-</div>
+    <a class="prev" onclick="plusSlides(-1)" aria-label="Previous slide">❮</a>
+    <a class="next" onclick="plusSlides(1)" aria-label="Next slide">❯</a>
+  </div>
 
-<!-- 🔘 Dot indicators -->
-<div class="dot-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-<!-- 📌 Projects Section -->
-<section class="projects-section fade-in-up" id="projects">
-    <h2 class="section-title">Some Things I've Interested In</h2>
+  <!-- 🔘 Dot indicators -->
+  <div class="dot-container" aria-label="Slideshow navigation">
+    <span class="dot" onclick="currentSlide(1)" aria-label="Slide 1"></span>
+    <span class="dot" onclick="currentSlide(2)" aria-label="Slide 2"></span>
+    <span class="dot" onclick="currentSlide(3)" aria-label="Slide 3"></span>
+  </div>
+
+  <!-- 📌 Projects Section -->
+  <section class="projects-section fade-in-up" id="projects">
+    <h2 class="section-title">Some Things I'm Interested In</h2>
     <div class="underline"></div>
-</section>
+  </section>
 
-<!-- 📌 Projects Wildcards -->
-<div class="projects-grid">
+  <!-- 📌 Projects Grid -->
+  <div class="projects-grid">
     <div class="project-card">
-        <img src="/static/image/project_section/project1.jpg" alt="Project 1">
-        <h3><a href="projects/taxi_ride.html" class="project-link">Chicago Taxi MLOPS</a></h3>
-        <p>The end-to-end ML pipeline & workflow to predict the ride duration of Chicago Taxi Dataset.</p>
+      <img src="/static/image/project_section/project1.jpg" alt="Chicago Taxi MLOps project preview" loading="lazy">
+      <h3><a href="projects/taxi_ride.html" class="project-link">Chicago Taxi MLOPS</a></h3>
+      <p>The end-to-end ML pipeline & workflow to predict the ride duration of the Chicago Taxi dataset.</p>
     </div>
-    <div class="project-card">
-        <img src="/static/image/project_section/project2.jpg" alt="Project 2">
-        <h3><a href="projects/student_retention.html" class="project-link">Student Retention In Higher Education</a></h3>
-        <p>Classifies students dropping out of the course using a statistical model.</p>
-    </div>
-    <div class="project-card">
-        <img src="/static/image/project_section/project3.jpg" alt="Project 3">
-        <h3>Healthcare Prediction Users App</h3>
-        <p>The User Interface for health prediction using Streamlit.</p>
-    </div>
-    <div class="project-card">
-        <img src="/static/image/project_section/project4.jpg" alt="Project 4">
-        <h3><a href="projects/geospatial_crash.html" class="project-link">Geospatial Crash Modelling</a></h3>
-        <p>A Geospatial Data Science modelling the car crash</p>
-    </div>
-    <div class="project-card">
-        <img src="/static/image/project_section/project5.jpg" alt="Project 5">
-        <h3><a href="/projects/million-songs.html" class="project-link">Million Songs - PySpark</a></h3>
-        <p>Applying Machine Learning for genre classification and audio recommendation.</p>
-    </div>
-    <div class="project-card">
-        <img src="/static/image/project_section/project6.jpg" alt="Project 6">
-        <h3><a href="projects/precipitation-project.html" class="project-link">Precipitation Analysis</a></h3>
-        <p>Processing, analyzing, and predicting precipitation data across the globe.</p>
-    </div>      
-</div>
 
-<!-- 📌 About Me Section -->
-<section class="about-section fade-in-up" id="about">
+    <div class="project-card">
+      <img src="/static/image/project_section/project2.jpg" alt="Student retention project preview" loading="lazy">
+      <h3><a href="projects/student_retention.html" class="project-link">Student Retention In Higher Education</a></h3>
+      <p>Classifies students likely to drop a course using a statistical model and cohort features.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="/static/image/project_section/project3.jpg" alt="Healthcare prediction app preview" loading="lazy">
+      <h3>Healthcare Prediction Users App</h3>
+      <p>Streamlit UI prototype for health risk prediction.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="/static/image/project_section/project4.jpg" alt="Geospatial crash modeling preview" loading="lazy">
+      <h3><a href="projects/geospatial_crash.html" class="project-link">Geospatial Crash Modelling</a></h3>
+      <p>Geospatial data science approach to identify and model car crash hotspots.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="/static/image/project_section/project5.jpg" alt="Million Songs PySpark project preview" loading="lazy">
+      <h3><a href="/projects/million-songs.html" class="project-link">Million Songs - PySpark</a></h3>
+      <p>Genre classification and audio recommendation at scale using PySpark.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="/static/image/project_section/project6.jpg" alt="Precipitation analysis project preview" loading="lazy">
+      <h3><a href="projects/precipitation-project.html" class="project-link">Precipitation Analysis</a></h3>
+      <p>Processing, analyzing, and predicting precipitation trends worldwide.</p>
+    </div>
+  </div>
+
+  <!-- 📌 About Me Section -->
+  <section class="about-section fade-in-up" id="about">
     <h2 class="section-title">About Me</h2>
     <div class="underline"></div>
 
     <div class="about-content">
-        <div class="about-image">
-            <img src="/static/image/about_section/profile.jpg" alt="Dario Profile">
-        </div>
-        <div class="about-text">
-            <p style = "text-align:justify;">
-                Hi, I’m <strong>Dario</strong> — a passionate and detail-oriented Data Analyst and aspiring Data Scientist. With a strong background in machine 
-                learning, statistics, and data visualization, I enjoy transforming data into actionable insights and building end-to-end analytical solutions.
-            </p>
-            <p style = "text-align:justify;">
-                From predictive modeling to geospatial analysis, I love solving real-world problems with data. I’m always exploring 
-                new tools, algorithms, and challenges in the world of analytics and AI.
-            </p>
-            <p style = "text-align:justify;">
-                Currently, I’m enhancing my portfolio through impactful personal projects, and I’m open to exciting opportunities where I can grow and contribute 
-                meaningfully.
-            </p>
-        </div>
+      <div class="about-image">
+        <img src="/static/image/about_section/profile.jpg" alt="Portrait of Dario Dang" loading="lazy">
+      </div>
+      <div class="about-text">
+        <p style="text-align:justify;">
+          Hi, I’m <strong>Dario</strong> — a passionate and detail-oriented Data Analyst and aspiring Data Scientist. With a strong background in
+          machine learning, statistics, and data visualization, I enjoy transforming data into actionable insights and building end-to-end analytical solutions.
+        </p>
+        <p style="text-align:justify;">
+          From predictive modeling to geospatial analysis, I love solving real-world problems with data. I’m always exploring
+          new tools, algorithms, and challenges in the world of analytics and AI.
+        </p>
+        <p style="text-align:justify;">
+          I’m enhancing my portfolio through impactful personal projects and I’m open to opportunities where I can grow and contribute meaningfully.
+        </p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- 📌 Certificates Section -->
-<section class="certificates-section" id="certificates">
+  <!-- 📌 Certificates Section -->
+  <section class="certificates-section" id="certificates">
     <div class="fade-in-up">
-        <h2 class="section-title">Courses & Certificates</h2>
-        <div class="underline"></div>
+      <h2 class="section-title">Courses & Certificates</h2>
+      <div class="underline"></div>
     </div>
     <div class="carousel-wrapper">
-        <div class="carousel-track">
-            <!-- 8 Wildcards -->
-            <div class="certificate-card">
-                <a href="certificates/cert1.html">
-                    <img src="/static/image/certificate_section/cert1.jpg" alt="Certificate 1">
-                    <p>Master of Applied Data Science</p>
-                </a>
-            </div>
-            <div class="certificate-card">
-                <a href="certificates/cert2.html">
-                    <img src="/static/image/certificate_section/cert2.jpg" alt="Certificate 2">
-                    <p>Machine Learning for Data Analytic</p>
-                </a>
-            </div>
-            <div class="certificate-card">
-                <a href="certificates/cert3.html">
-                    <img src="/static/image/certificate_section/cert3.jpg" alt="Certificate 3">
-                    <p>Python for Data Analytic</p>
-                </a>
-            </div>
-            <div class="certificate-card">
-                <a href="certificates/cert4.html">
-                    <img src="/static/image/certificate_section/cert4.jpg" alt="Certificate 4">
-                    <p>SQL for Data Analytic</p>
-                </a>
-            </div>
-            <div class="certificate-card">
-                <a href="certificates/cert5.html">
-                    <img src="/static/image/certificate_section/cert5.jpg" alt="Certificate 5">
-                    <p>Feature Manipulate Engineer (FME)</p>
-                </a>
-            </div>
-            <div class="certificate-card">
-                <a href="certificates/cert6.html">
-                    <img src="/static/image/certificate_section/cert6.png" alt="Certificate 6">
-                    <p>BA.Business & Marketing</p>
-                    
-                </a>
-            </div>
-            <div class="certificate-card">
-                <img src="/static/image/certificate_section/Intermediate Python.jpg" alt="Certificate 7">
-                <p>Advanced Python - Datacamp</p>
-            </div>
-            <div class="certificate-card">
-                <img src="/static/image/certificate_section/Data Manipulation In SQL.jpg" alt="Certificate 8">
-                <p>Data Manipulation in SQL- Datacamp</p>
-            </div>
+      <div class="carousel-track">
+        <div class="certificate-card">
+          <a href="certificates/cert1.html">
+            <img src="/static/image/certificate_section/cert1.jpg" alt="Master of Applied Data Science certificate" loading="lazy">
+            <p>Master of Applied Data Science</p>
+          </a>
         </div>
+        <div class="certificate-card">
+          <a href="certificates/cert2.html">
+            <img src="/static/image/certificate_section/cert2.jpg" alt="Machine Learning for Data Analytics certificate" loading="lazy">
+            <p>Machine Learning for Data Analytic</p>
+          </a>
+        </div>
+        <div class="certificate-card">
+          <a href="certificates/cert3.html">
+            <img src="/static/image/certificate_section/cert3.jpg" alt="Python for Data Analytics certificate" loading="lazy">
+            <p>Python for Data Analytic</p>
+          </a>
+        </div>
+        <div class="certificate-card">
+          <a href="certificates/cert4.html">
+            <img src="/static/image/certificate_section/cert4.jpg" alt="SQL for Data Analytics certificate" loading="lazy">
+            <p>SQL for Data Analytic</p>
+          </a>
+        </div>
+        <div class="certificate-card">
+          <a href="certificates/cert5.html">
+            <img src="/static/image/certificate_section/cert5.jpg" alt="FME certificate" loading="lazy">
+            <p>Feature Manipulate Engineer (FME)</p>
+          </a>
+        </div>
+        <div class="certificate-card">
+          <a href="certificates/cert6.html">
+            <img src="/static/image/certificate_section/cert6.png" alt="Business & Marketing bachelor certificate" loading="lazy">
+            <p>BA.Business & Marketing</p>
+          </a>
+        </div>
+        <div class="certificate-card">
+          <img src="/static/image/certificate_section/Intermediate Python.jpg" alt="Intermediate/Advanced Python - DataCamp" loading="lazy">
+          <p>Advanced Python - Datacamp</p>
+        </div>
+        <div class="certificate-card">
+          <img src="/static/image/certificate_section/Data Manipulation In SQL.jpg" alt="Data manipulation in SQL - DataCamp" loading="lazy">
+          <p>Data Manipulation in SQL- Datacamp</p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-
-<!-- 📌 Extracurricular Activities Section -->
-<section class="activities-section" id="activities">
+  <!-- 📌 Extracurricular Activities Section -->
+  <section class="activities-section" id="activities">
     <h2 class="section-title">Extracurricular Activities</h2>
     <div class="underline"></div>
 
-    <!-- Activity 1: Image Left, Text Right -->
     <div class="activity-card">
-        <div class="activity-image">
-            <img src="/static/image/activities_section/act1.jpg" alt="Basketball Captain">
-        </div>
-        <div class="activity-text">
-            <h3>University Basketball Player (Captain)</h3>
-            <p style = "text-align:justify;">
-                These were some of the most memorable days of my university life at International University as a captain of a basketball team.
-                I had the opportunity to collaborate with incredible teammates, contribute to meaningful activities, and grow every single day.
-                Through these experiences, I developed key skills such as teamwork, mentoring, leadership, and problem-solving, all of which have shaped my personal and professional journey.
-            </p>
-        </div>
+      <div class="activity-image">
+        <img src="/static/image/activities_section/act1.jpg" alt="University basketball team captain" loading="lazy">
+      </div>
+      <div class="activity-text">
+        <h3>University Basketball Player (Captain)</h3>
+        <p style="text-align:justify;">
+          Led a university basketball team—collaborating with teammates and contributing to meaningful activities. Developed teamwork, mentoring, leadership, and problem-solving.
+        </p>
+      </div>
     </div>
 
-    <!-- Activity 2: Text Left, Image Right -->
     <div class="activity-card reverse">
-        <div class="activity-image">
-            <img src="/static/image/activities_section/act2.jpg" alt="Basketball Founder">
-        </div>
-        <div class="activity-text">
-            <h3>Co-Founder University Basketball Club</h3>
-            <p style = "text-align:justify;">
-                As a Co-Founder of the University Basketball Club, I was responsible for building the team from the ground up—creating proposals, 
-                organizing tournaments, and leading key departments including operations, media, and training. This experience enhanced my leadership, 
-                project management, communication, and strategic planning skills while fostering teamwork and a strong club culture.
-            </p>
-        </div>
+      <div class="activity-image">
+        <img src="/static/image/activities_section/act2.jpg" alt="Co-founder of University Basketball Club" loading="lazy">
+      </div>
+      <div class="activity-text">
+        <h3>Co-Founder University Basketball Club</h3>
+        <p style="text-align:justify;">
+          Built the club from scratch: proposals, tournaments, operations, media, and training. Strengthened leadership, project management, and communication skills.
+        </p>
+      </div>
     </div>
 
-    <!-- Activity 3: Image Right, Text Left -->
     <div class="activity-card">
-        <div class="activity-image">
-            <img src="/static/image/activities_section/act3.jpg" alt="3x3 Basketball">
-        </div>
-        <div class="activity-text">
-            <h3>Basketball 3x3 Leagues Event</h3>
-            <p style = "text-align:justify;">
-                As the Event Leader of the University 3x3 Basketball League, I successfully coordinated and managed the entire tournament — 
-                from planning the event structure and scheduling games to overseeing logistics and team registrations. 
-                This role strengthened my skills in event management, communication, and stakeholder coordination, 
-                while promoting sportsmanship and student engagement on campus.
-            </p>
-        </div>
+      <div class="activity-image">
+        <img src="/static/image/activities_section/act3.jpg" alt="3x3 basketball league event leadership" loading="lazy">
+      </div>
+      <div class="activity-text">
+        <h3>Basketball 3x3 Leagues Event</h3>
+        <p style="text-align:justify;">
+          Coordinated the league end-to-end—scheduling, logistics, and registrations. Improved event management and stakeholder coordination.
+        </p>
+      </div>
     </div>
-</section>
-<script>
+  </section>
+
+  <script>
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show'); // 👈 Remove class when out of view
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+        else entry.target.classList.remove('show');
+      });
+    }, { threshold: 0.1 });
     const activityCards = document.querySelectorAll('.activity-card');
     activityCards.forEach(card => observer.observe(card));
-</script>
+  </script>
 
-    </div>
-
-    <!-- ✅ Slideshow Script (now runs AFTER content loads) -->
-    <script>
-    let current = 0; 
+  <!-- ✅ Slideshow Script (runs AFTER content loads) -->
+  <script>
+    let current = 0;
     let slides = [];
     let dots = [];
     let slideInterval;
     let isPaused = false;
     let isAnimating = false;
-        
+
     document.addEventListener("DOMContentLoaded", () => {
-        slides = Array.from(document.getElementsByClassName("mySlides"));
-        dots   = Array.from(document.getElementsByClassName("dot")); // optional
+      slides = Array.from(document.getElementsByClassName("mySlides"));
+      dots   = Array.from(document.getElementsByClassName("dot"));
 
-        if (!slides.length) return;
-    
-    // Ensure exactly one slide is current at start
-        slides.forEach(s => s.classList.remove(
-            'is-current','is-entering',
-            'slide-enter-from-right','slide-exit-to-left',
-            'slide-enter-from-left','slide-exit-to-right'
-        ));
+      if (!slides.length) return;
 
-        current = 0;
-        slides[0].classList.add('is-current');
-        if (dots[0]) dots[0].classList.add('active');
-        startAutoSlide();
+      slides.forEach(s => s.classList.remove(
+        'is-current','is-entering',
+        'slide-enter-from-right','slide-exit-to-left',
+        'slide-enter-from-left','slide-exit-to-right'
+      ));
+
+      current = 0;
+      slides[0].classList.add('is-current');
+      if (dots[0]) dots[0].classList.add('active');
+      startAutoSlide();
     });
 
     function showSlides(direction = 1) {
-        if (!slides.length || isAnimating) return;
-        isAnimating = true;
+      if (!slides.length || isAnimating) return;
+      isAnimating = true;
 
-        const prev = current;
-        current = (current + direction + slides.length) % slides.length;
-        const incoming = slides[current];
-        const outgoing = slides[prev];
+      const prev = current;
+      current = (current + direction + slides.length) % slides.length;
+      const incoming = slides[current];
+      const outgoing = slides[prev];
 
-        // Reset classes
-        incoming.classList.remove('slide-enter-from-right','slide-enter-from-left','is-current');
-        outgoing.classList.remove('slide-exit-to-left','slide-exit-to-right');
+      incoming.classList.remove('slide-enter-from-right','slide-enter-from-left','is-current');
+      outgoing.classList.remove('slide-exit-to-left','slide-exit-to-right');
 
-        // Prepare z-order and visibility
-        incoming.classList.add('is-entering');  // on top and visible
-        outgoing.classList.add('is-current');   // ensure it’s visible under the incoming
+      incoming.classList.add('is-entering');
+      outgoing.classList.add('is-current');
 
-        // Directional animations
-        if (direction === 1) {
-            incoming.classList.add('slide-enter-from-right');
-            outgoing.classList.add('slide-exit-to-left');
-        } else {
-            incoming.classList.add('slide-enter-from-left');
-            outgoing.classList.add('slide-exit-to-right');
-        }
+      if (direction === 1) {
+        incoming.classList.add('slide-enter-from-right');
+        outgoing.classList.add('slide-exit-to-left');
+      } else {
+        incoming.classList.add('slide-enter-from-left');
+        outgoing.classList.add('slide-exit-to-right');
+      }
 
-        // Dots (optional)
-        if (dots[prev]) dots[prev].classList.remove('active');
-        if (dots[current]) dots[current].classList.add('active');
+      if (dots[prev]) dots[prev].classList.remove('active');
+      if (dots[current]) dots[current].classList.add('active');
 
-        // When outgoing animation finishes, finalize state
-        const onOutEnd = () => {
-            outgoing.classList.remove('is-current','slide-exit-to-left','slide-exit-to-right');
-            incoming.classList.remove('is-entering','slide-enter-from-right','slide-enter-from-left');
-            incoming.classList.add('is-current'); // settle new current
-            outgoing.removeEventListener('animationend', onOutEnd);
-            isAnimating = false;
-        };
-        outgoing.addEventListener('animationend', onOutEnd);
+      const onOutEnd = () => {
+        outgoing.classList.remove('is-current','slide-exit-to-left','slide-exit-to-right');
+        incoming.classList.remove('is-entering','slide-enter-from-right','slide-enter-from-left');
+        incoming.classList.add('is-current');
+        outgoing.removeEventListener('animationend', onOutEnd);
+        isAnimating = false;
+      };
+      outgoing.addEventListener('animationend', onOutEnd);
     }
-        
+
     function plusSlides(n) {
-        stopAutoSlide();
-        showSlides(n);
-        startAutoSlide();
-    }
-        
-    function currentSlide(n1Based) {
-        stopAutoSlide();
-        const target = (n1Based - 1 + slides.length) % slides.length;
-        const direction = target >= current
-            ? (target === current ? 0 : 1)
-            : -1;
-        if (direction !== 0) showSlides(direction);
-        startAutoSlide();
-    }
-        
-    function startAutoSlide() {
-        stopAutoSlide();
-        slideInterval = setInterval(() => {
-            if (!isPaused) showSlides(1);
-        }, 7000);
+      stopAutoSlide();
+      showSlides(n);
+      startAutoSlide();
     }
 
+    function currentSlide(n1Based) {
+      stopAutoSlide();
+      const target = (n1Based - 1 + slides.length) % slides.length;
+      const direction = target >= current ? (target === current ? 0 : 1) : -1;
+      if (direction !== 0) showSlides(direction);
+      startAutoSlide();
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      slideInterval = setInterval(() => {
+        if (!isPaused) showSlides(1);
+      }, 7000);
+    }
     function stopAutoSlide() { if (slideInterval) clearInterval(slideInterval); }
     function pauseAutoSlide()  { isPaused = true;  }
     function resumeAutoSlide() { isPaused = false; }
-    </script>
+  </script>
 
-    <!-- ✅ About Me Fade-in Animation Script -->
-    <script>
+  <!-- ✅ Fade-in + carousel scripts unchanged -->
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const fadeElements = document.querySelectorAll('.fade-in-up');
-        
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                } else {
-                    entry.target.classList.remove('show'); // 👈 allows animation to replay
-                }
-            });
-        }, {
-            threshold: 0.2
+      const fadeElements = document.querySelectorAll('.fade-in-up');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('show');
+          else entry.target.classList.remove('show');
         });
-        
-        fadeElements.forEach(el => observer.observe(el));
+      }, { threshold: 0.2 });
+      fadeElements.forEach(el => observer.observe(el));
     });
-    </script>
-    <!-- ✅ Course & Certificate Section -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const track = document.querySelector('.carousel-track');
-            const cards = document.querySelectorAll('.certificate-card');
-            const cardsPerGroup = 4;
-            const totalGroups = Math.ceil(cards.length / cardsPerGroup);
-            let currentSlide = 0;
-        
-            // Clone first group and append to the end
-            const firstGroup = Array.from(cards).slice(0, cardsPerGroup);
-            firstGroup.forEach(card => {
-                const clone = card.cloneNode(true);
-                track.appendChild(clone);
-            });
-        
-            const allSlides = Math.ceil(track.children.length / cardsPerGroup);
-        
-            function slideCertificates() {
-                currentSlide++;
-                const offset = currentSlide * -100;
-                track.style.transition = "transform 0.5s ease";
-                track.style.transform = `translateX(${offset}%)`;
-        
-                // When reaching the cloned group, reset to original
-                if (currentSlide === allSlides - 1) {
-                    setTimeout(() => {
-                        track.style.transition = "none"; // Remove animation
-                        track.style.transform = `translateX(0%)`;
-                        currentSlide = 0;
-                    }, 500); // Match transition duration
-                }
-            }
-        
-            setInterval(slideCertificates, 5000); // every 5 seconds
-        });
-    </script>
-    <!-- ✅ Project Card Scroll Animation -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const projectCards = document.querySelectorAll('.project-card');
+  </script>
 
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    } else {
-                        entry.target.classList.remove('visible');
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const track = document.querySelector('.carousel-track');
+      const cards = document.querySelectorAll('.certificate-card');
+      const cardsPerGroup = 4;
+      let currentSlide = 0;
 
-            projectCards.forEach(card => observer.observe(card));
+      const firstGroup = Array.from(cards).slice(0, cardsPerGroup);
+      firstGroup.forEach(card => track.appendChild(card.cloneNode(true)));
+
+      const allSlides = Math.ceil(track.children.length / cardsPerGroup);
+
+      function slideCertificates() {
+        currentSlide++;
+        const offset = currentSlide * -100;
+        track.style.transition = "transform 0.5s ease";
+        track.style.transform = `translateX(${offset}%)`;
+
+        if (currentSlide === allSlides - 1) {
+          setTimeout(() => {
+            track.style.transition = "none";
+            track.style.transform = `translateX(0%)`;
+            currentSlide = 0;
+          }, 500);
+        }
+      }
+      setInterval(slideCertificates, 5000);
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const projectCards = document.querySelectorAll('.project-card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+          else entry.target.classList.remove('visible');
         });
-    </script>       
+      }, { threshold: 0.2 });
+      projectCards.forEach(card => observer.observe(card));
+    });
+  </script>
 </body>
 </html>
