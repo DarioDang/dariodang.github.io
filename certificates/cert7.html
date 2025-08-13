@@ -15,6 +15,11 @@
             text-align: center;
         }
 
+        .no-save {
+            -webkit-user-drag: none;
+            user-select: none;
+        }
+
         .certificate-container {
             background-color: #fff;
             padding: 40px 30px;
@@ -62,6 +67,16 @@
         }
     </style>
 </head>
+<script>
+    // Disable right-click only on elements with .no-save
+    document.addEventListener('contextmenu', (e) => {
+      if (e.target.closest('.no-save')) e.preventDefault();
+    });
+    // Prevent dragging those images
+    document.addEventListener('dragstart', (e) => {
+      if (e.target.closest('.no-save')) e.preventDefault();
+    });
+</script>
 <body>
     <div class="certificate-container">
         <!-- University Logo -->
@@ -70,7 +85,10 @@
 
         <!-- Certificate Image -->
         <img src="/static/image/certificate_section/Master_Degree.jpg" 
-             alt="Bachelor of Business Management | Marketing" class="certificate">
+             alt="Bachelor of Business Management | Marketing" 
+             class="certificate no-save"
+             draggable="false"
+             oncontextmenu="return false;">
 
         <!-- Title and Description -->
         <h1>Bachelor of Business Management with Marketing</h1>
