@@ -1,0 +1,3 @@
+# Ignore all .DS_Store files (macOS metadata)
+.DS_Store
+static/.DS_Store
