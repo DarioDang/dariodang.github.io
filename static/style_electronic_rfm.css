@@ -1,0 +1,219 @@
+/* 🔥 Electronic RFM Section */
+.project-detail-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.project-detail-section ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.project-detail-section h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-link {
+    color: inherit;             /* Use the default text color */
+    text-decoration: none;     /* Remove underline */
+    font-weight: bold;         /* Optional: keep it bold */
+}
+
+.project-link:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+    color: inherit;             /* Prevent hover color change */
+}
+
+/* Author Section */
+.author-info {
+    text-align: right;
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+/* Background Section */
+.body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 80px auto 0; /* top padding for fixed navbar */
+    padding: 40px 20px;
+
+    /* Background image setup */
+    background-image: url('/static/image/electronic_rfm/background.jpg');
+    background-size: cover;          /* Make it cover the entire area */
+    background-position: center;     /* Center the image */
+    background-attachment: fixed;    /* Optional: parallax effect */
+    position: relative;              /* Needed for overlay positioning */
+}
+
+/* Transparent overlay */
+.body::before {
+    content: "";
+    position: fixed;      /* Stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7); /* White overlay, 70% opacity */
+    z-index: -1;          /* Keep it behind the text */
+}
+
+/* Transparent navbar only for pages with class="body" */
+.body .topnav {
+    background: transparent;
+    backdrop-filter: blur(6px);           /* frosted glass effect */
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+/* Image Section */
+.figure-card {
+    max-width: 980px;                /* similar width */
+    margin: 24px auto;
+    padding: 14px;                   /* outer light frame space */
+    background: linear-gradient(#f4f6f8, #eff2f5); /* soft grey frame */
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.10);
+}
+  
+
+.figure-card .figure-inner {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.04); /* subtle inner line */
+}
+  
+
+.figure-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+  
+
+.figure-card figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #333;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,.08);       /* faint separator like the screenshot */
+}
+
+.table-card figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #333;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,.08);
+  }
+  
+
+@media (max-width: 640px) {
+    .figure-card { padding: 10px; border-radius: 12px; }
+    .figure-card .figure-inner { padding: 12px; }
+}
+
+/* Table Section */
+.rfm-table-container {
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 20px;
+    background: #ffffffcc; /* soft white with transparency */
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(6px);
+}
+
+.rfm-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;   /* ensures consistent column widths */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.rfm-table thead tr {
+    background: linear-gradient(135deg, #0b3d57, #1572a1);
+    color: #fff;
+}
+
+.rfm-table td, .rfm-table th {
+    text-align: center;
+    padding: 14px 16px;
+    vertical-align: middle;
+    line-height: 1.5;
+    border-bottom: 1px solid #e6eef3;
+    word-wrap: break-word;
+}
+
+/* Header cells */
+/* .rfm-table th {
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+} */
+
+/* Table body cells - center everything */
+/* .rfm-table td {
+    text-align: center;     
+    padding: 14px 16px;
+    vertical-align: middle;
+    line-height: 1.5;
+    border-bottom: 1px solid #e6eef3;
+    word-wrap: break-word;
+} */
+
+
+/* First column (Cluster labels) bold */
+.rfm-table td:first-child {
+    font-weight: 700;
+    color: #0b3d57;
+}
+
+/* Zebra rows */
+.rfm-table tbody tr:nth-child(even) {
+    background: #f9fcfe;
+}
+
+.rfm-table tbody tr:hover {
+    background: #eef6fb;
+    transition: background 0.25s ease-in-out;
+}
+
+/* Caption */
+.rfm-table-caption {
+    text-align: center;
+    margin-top: 12px;
+    font-style: italic;
+    color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
