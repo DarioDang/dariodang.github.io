@@ -166,10 +166,17 @@
       <h3><a href="projects/precipitation-project.html" class="project-link">Precipitation Analysis</a></h3>
       <p>Processing, analyzing, and predicting precipitation trends worldwide.</p>
     </div>
+
     <div class="project-card">
       <img src="/static/image/project_section/project7.jpg" alt="Electronic customer segmentation preview" loading="lazy">
       <h3><a href="projects/electronic_rfm.html" class="project-link">Customer Segmentation Pipeline</a></h3>
       <p>The end-to-end customers segmentation pipelines using RFM & K-Means Clustering model.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="/static/image/project_section/project8.jpg" alt="NYC Taxi Power BI" loading="lazy">
+      <h3><a href="projects/nyc_powerbi.html" class="project-link">NYC Taxi Power BI Dashboards</a></h3>
+      <p>Power BI dashboard deliver insights on NYC Taxi operations tracking using Redshift and dbt pipelines.</p>
     </div>
   </div>
 
@@ -443,15 +450,29 @@
   </script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const projectCards = document.querySelectorAll('.project-card');
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll('.project-card');
+
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
-          else entry.target.classList.remove('visible');
-        });
-      }, { threshold: 0.2 });
-      projectCards.forEach(card => observer.observe(card));
+        // reset stagger delay for each scroll batch
+        let localStagger = 0;
+
+        entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => a.target.offsetTop - b.target.offsetTop) // keep visual order
+          .forEach(entry => {
+            const delay = localStagger * 20; 
+            setTimeout(() => entry.target.classList.add('visible'), delay);
+            localStagger++;
+          });
+
+        // remove visible class when leaving viewport (so it can replay)
+        entries
+          .filter(entry => !entry.isIntersecting)
+          .forEach(entry => entry.target.classList.remove('visible'));
+      }, { threshold: 0.25 });
+
+      cards.forEach(card => observer.observe(card));
     });
   </script>
 </body>
