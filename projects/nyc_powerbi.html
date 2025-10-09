@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        NYC TAXI POWERBI DASHBOARD
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 80px auto 0; 
+            padding: 40px 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/style_navigate_bar.css">
+    <link rel="stylesheet" href="/static/style_nyc_taxi_powerbi.css">
+</head>
+<body class="body">
+    <!-- Reusable Top Navbar -->
+    <nav class="topnav">
+        <a href="/">Home</a>
+        <a href="/#about">About</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#certificates">Certificates</a>
+        <a href="/#activities">Activities</a>
+        <a href="https://github.com/DarioDang" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/dario-dang-89049020a/" target="_blank">LinkedIn</a>
+        <a href="/static/files/Dario_CV.pdf" download>MyCV</a>
+    </nav>
+        <h1 style="text-align: center;">
+            NYC TAXI ANALYSIS AUTOMATION DASBOARD <br> USING POWER BI  
+        </h1>
+        <div class="author-info">
+            <p style="text-align:right;">
+               <strong>Author:</strong> Dario Dang<br>
+               <strong>Date:</strong> 9 October, 2025<br>
+                <a href="https://github.com/DarioDang/nyc-taxi-automated-reports" target="_blank">Code File</a>
+            </p>
+        </div>
+        <section>
+                <h2>Project Overview</h2>
+                <p>
+                    This project explores the complete journey of turning raw public taxi trip data into meaningful business insights using modern data tools. 
+                    It automates the process of collecting, cleaning, storing, and visualizing New York City green taxi trip data across multiple years.
+                </p>
+
+        </section>
+                
+                <section class="project-section">
+                    <h2>Interactive Dashboard (Secure View)</h2>
+                    <div class="figure-card">
+                      <div class="figure-inner">
+                            <iframe 
+                            title="NYC Taxi Dashboard"
+                            width="100%" height="650"
+                            src="https://app.powerbi.com/reportEmbed?reportId=6f156019-f164-4bef-91f7-2b47656aed47&autoAuth=true&ctid=a7380202-eb54-415a-9b66-4d9806cfab42"
+                            frameborder="0" allowfullscreen>
+                            </iframe>
+                            <figcaption>
+                            Live dashboard — sign in with Power BI to interact.
+                            </figcaption>
+                        </div>
+                    </div>
+                </section>
+                
+                <h2>What the Project Does</h2>
+                <p>
+                    The system automatically extracts monthly taxi data, standardizes and uploads it to Amazon Redshift through <strong>dbt</strong> (Data Build Tool), 
+                    and refreshes an interactive <strong>Power BI dashboard</strong>. The dashboard highlights patterns such as total trips, payment method trends, 
+                    average fares, and busiest pickup zones — helping users understand how urban mobility and passenger behaviors change over time.
+                </p>
+            
+                <h2>Why It Matters</h2>
+                <p>
+                    The dashboard simplifies decision-making for transport analysts and city planners by providing real-time, visual access to key metrics. 
+                    It shows how data engineering and business intelligence can work together to make complex datasets accessible and insightful.
+                </p>
+            
+                <h2>Technical Summary</h2>
+                <p>
+                    The NYC Taxi Analytics project automates the entire data journey — from data ingestion to visualization — 
+                    using a modern cloud-based architecture. The workflow below outlines how raw trip data is collected, 
+                    processed, and transformed into actionable insights through an integrated AWS–Redshift–dbt–Power BI pipeline.
+                </p>
+                
+                <section id="workflow-diagram" class="project-section">
+                    <h3>NYC Taxi Data Workflow</h3>
+                    <p>
+                      This diagram illustrates the end-to-end data pipeline powering the NYC Taxi Power BI dashboard.
+                      Raw trip data is collected from public sources, ingested into AWS S3, transformed via Redshift and dbt,
+                      and visualized in Power BI for automated reporting.
+                    </p>
+                    <figure class="figure-card">
+                        <div class="figure-inner">
+                          <img
+                            src="/static/image/nyc_powerbi_project/NYC_WORKFLOW.png"
+                            alt="NYC Taxi Workflow Diagram"
+                            loading="lazy"
+                            style="aspect-ratio:16/9; object-fit:contain;"
+                          >
+                        </div>
+                        <figcaption>
+                            End-to-end NYC Taxi analytics pipeline — from ingestion to visualization.
+                        </figcaption>
+                    </figure>
+                    <ul>
+                        <li>
+                          <strong>Data Source:</strong> Monthly <em>NYC Green Taxi trip datasets</em> retrieved from the 
+                          <a href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page" target="_blank">NYC Open Data portal</a>.
+                        </li>
+                        <li>
+                          <strong>Data Ingestion & Storage:</strong> Python scripts extract and clean raw CSV data before 
+                          uploading it to an <strong>AWS S3 Data Lake</strong>, serving as the central storage layer.
+                        </li>
+                        <li>
+                          <strong>Data Processing:</strong> <strong>Amazon Redshift Spectrum</strong> queries S3 data directly. 
+                          <strong>dbt (Data Build Tool)</strong> then structures and transforms it into <strong>Staging</strong> and 
+                          <strong>Core</strong> models, ensuring consistency and traceability.
+                        </li>
+                        <li>
+                          <strong>Data Modeling:</strong> <strong>Seed models</strong> (such as reference tables) support business logic 
+                          like payment types and zone mapping, allowing clean joins and enriched analytics.
+                        </li>
+                        <li>
+                          <strong>Visualization:</strong> An <strong>interactive Power BI dashboard</strong> connects to Redshift 
+                          for real-time analysis — including trip demand, payment behavior, revenue distribution, and performance comparison.
+                        </li>
+                        <li>
+                          <strong>Automation:</strong> The pipeline is fully automated — each new month’s data is ingested, 
+                          transformed, and reflected in Power BI without manual refresh, ensuring up-to-date reporting.
+                        </li>
+                      </ul>
+                </section>
+            
+                <h2>Key Insights</h2>
+                <section>
+                    <h3> I. Overview Dashboard</h3>
+                    <figure class="figure-card">
+                        <div class="figure-inner">
+                        <img
+                            src="/static/image/nyc_powerbi_project/overview-dashboard.jpg"
+                            alt="Power BI Overview Dashboard"
+                            loading="lazy"
+                            style="aspect-ratio:16/9; object-fit:contain;"
+                        >
+                        </div>
+                        <figcaption>
+                            Figure 1. Overview Dashboard 
+                        </figcaption>
+                    </figure>
+                    <p>
+                        This dashboard summarizes New York City taxi activity so non-technical readers can quickly see demand, timing,
+                        and where trips happen most.
+                    </p>
+                    
+                    <ul>
+                        <li><strong>Total Demand:</strong> Over <strong>2 million trips</strong> in the period; typical ride is about <strong>39 km</strong>.</li>
+                        <li><strong>Weekly Pattern:</strong> Demand is steady year-round with noticeable peaks around weeks <strong>10–20</strong> and <strong>45–47</strong>
+                            (likely events/seasonal travel).</li>
+                        <li><strong>By Day:</strong> <strong>Thursday</strong> and <strong>Wednesday</strong> are the busiest days; weekends are quieter.</li>
+                        <li><strong>Revenue Shape:</strong> Follows trip volume — highest mid-week (≈ <strong>$8M/day</strong>), lower on weekends. 
+                            Average fare is about <strong>$22.29</strong> per trip.</li>
+                        <li><strong>Top Zones:</strong> Highest activity from <strong>East Harlem</strong> and the <strong>Upper East Side</strong>, 
+                            indicating strong pickup demand.</li>
+                    </ul>
+                    
+                    <h4>Actionable Recommendations</h4>
+                    <ul>
+                        <li><strong>Staffing/Supply:</strong> Allocate more drivers mid-week (Wed–Thu) to capture peak demand.</li>
+                        <li><strong>Zone Focus:</strong> Prioritize supply and promotions in <strong>East Harlem</strong> and <strong>Upper East Side</strong>.</li>
+                        <li><strong>Weekend Strategy:</strong> Use <strong>discounts/tourist offers</strong> on weekends to smooth demand.</li>
+                        <li><strong>Revenue Guardrails:</strong> Track performance against an average fare target of ~<strong>$22</strong> to protect margins.</li>
+                    </ul>
+                    <h3> II. Revenue Analysis Dashboard </h3>
+                        <figure class="figure-card">
+                            <div class="figure-inner">
+                            <img
+                                src="/static/image/nyc_powerbi_project/revenue-dashboard.jpg"
+                                alt="Power BI Revenue Dashboard"
+                                loading="lazy"
+                                style="aspect-ratio:16/9; object-fit:contain;"
+                            >
+                            </div>
+                            <figcaption>
+                                Figure 2. Revenue Analysis Dashboard 
+                            </figcaption>
+                        </figure>
+                        <p>
+                            The Revenue Dashboard highlights how New York City taxi revenue changes across time, payment methods, and locations.
+                            It reveals where the money comes from and helps identify which factors drive overall profitability.
+                        </p>
+                        
+                        <ul>
+                            <li><strong>Total Revenue:</strong> The fleet generated about <strong>$49 million</strong> in total revenue during the analysis period.</li>
+                            <li><strong>Payment Insights:</strong> 
+                            <ul>
+                                <li><strong>Credit card payments</strong> account for roughly <strong>72%</strong> of total revenue (<strong>$32.1M</strong>), showing a clear customer preference for cashless transactions.</li>
+                                <li><strong>Cash payments</strong> make up <strong>28%</strong> (<strong>$12.8M</strong>), while disputed or unknown payments are minimal (only <strong>0.13%</strong>).</li>
+                            </ul>
+                            </li>
+                            <li><strong>Revenue Trends:</strong>
+                            <ul>
+                                <li>Revenue peaks between <strong>Wednesday and Friday</strong>, exceeding <strong>$7.8M</strong> daily before dropping on weekends.</li>
+                                <li>Weekly revenue stays strong throughout the year, with noticeable peaks around fiscal weeks <strong>20–40</strong>.</li>
+                            </ul>
+                            </li>
+                            <li><strong>High-Value Areas:</strong> 
+                            The top revenue per trip is recorded in <strong>Arden Heights</strong> ($203), followed by <strong>Rossville</strong> and <strong>Newark Airport</strong> — areas associated with longer or premium rides.</li>
+                            <li><strong>Revenue by Borough:</strong> 
+                            <strong>Manhattan</strong> dominates with <strong>$26M</strong> in total revenue, far surpassing <strong>Queens ($13M)</strong> and <strong>Brooklyn ($7M)</strong>.</li>
+                        </ul>
+                        
+                        <h4>Actionable Recommendations</h4>
+                        <ul>
+                            <li><strong>Encourage digital payments:</strong> Since over 70% of customers pay by card, optimize cashless payment processing and partner with card providers for loyalty rewards.</li>
+                            <li><strong>Target premium areas:</strong> Focus service quality and promotions in high-value zones such as <strong>Arden Heights</strong> and <strong>Newark Airport</strong>.</li>
+                            <li><strong>Balance demand:</strong> Create weekend incentives to increase ridership when weekday revenues drop.</li>
+                            <li><strong>Geographical focus:</strong> Manhattan remains the primary revenue hub — ensure optimal driver coverage and maintain high service reliability there.</li>
+                        </ul>
+                    <h3> III. Zones Analysis Dashboard </h3>
+                    <figure class="figure-card">
+                        <div class="figure-inner">
+                        <img
+                            src="/static/image/nyc_powerbi_project/zone-dashboard.jpg"
+                            alt="Power BI Zone Dashboard"
+                            loading="lazy"
+                            style="aspect-ratio:16/9; object-fit:contain;"
+                        >
+                        </div>
+                        <figcaption>
+                            Figure 3. NYC Taxi Zone Analysis Dashboard 
+                        </figcaption>
+                    </figure>
+                    <p>
+                            The Zone Dashboard provides a geographic view of New York City taxi activity. 
+                            It highlights where trips start and end, which areas are most active, and how revenue is distributed across the city’s boroughs.
+                            This helps understand passenger movement patterns and identify high-demand zones.
+                    </p>
+                        
+                        <ul>
+                            <li><strong>City Coverage:</strong> There are <strong>261 active taxi zones</strong> across NYC, generating around <strong>4.43 million total trips</strong>.</li>
+                            <li><strong>Top Pick-up and Drop-off:</strong> 
+                            <ul>
+                                <li>Both the <strong>most popular pick-up</strong> and <strong>drop-off</strong> location is <strong>East Harlem South</strong>, 
+                                    showing it as a central hub for passenger flow.</li>
+                        </ul>
+                            </li>
+                            <li><strong>Top 5 Trip Zones:</strong> 
+                            East Harlem (North & South), Upper East Side, Central Harlem, and Upper West Side record the highest number of rides — 
+                            all located in Manhattan’s dense commuter corridor.</li>
+                            <li><strong>Revenue Share by Borough:</strong> 
+                            <strong>Manhattan</strong> dominates with <strong>54%</strong> of total taxi revenue, followed by <strong>Queens (27%)</strong> and <strong>Brooklyn (14%)</strong>.
+                            The Bronx and other areas contribute minimally.</li>
+                            <li><strong>Top Revenue Zones:</strong> 
+                            <strong>LaGuardia Airport</strong> leads with <strong>$2.1M</strong> in total revenue, followed by <strong>Upper East Side</strong> and <strong>JFK Airport</strong>, 
+                            confirming that airport and central-city rides are the main revenue drivers.</li>
+                        </ul>
+                        
+                    <h4>Actionable Recommendations</h4>
+                        <ul>
+                            <li><strong>Strategic Driver Allocation:</strong> Focus more drivers in <strong>East Harlem</strong>, <strong>Upper East Side</strong>, 
+                                and near major airports to capture high trip and revenue zones.</li>
+                            <li><strong>Demand Forecasting:</strong> Use these zone patterns to predict daily or seasonal surges and balance supply efficiently.</li>
+                            <li><strong>Partnership Opportunities:</strong> Collaborate with businesses or hotels around <strong>airport areas</strong> for exclusive pick-up/drop-off services.</li>
+                            <li><strong>Urban Mobility Planning:</strong> City planners can use this data to manage congestion and improve transport infrastructure in Manhattan’s core zones.</li>
+                        </ul>
+                    <h3> IV. Revenue & Trip Comparision Dashboard </h3>
+                    <figure class="figure-card">
+                        <div class="figure-inner">
+                        <img
+                            src="/static/image/nyc_powerbi_project/revenue-compare-dashboard.jpg"
+                            alt="Power BI Revenue Comparision Dashboard"
+                            loading="lazy"
+                            style="aspect-ratio:16/9; object-fit:contain;"
+                        >
+                        </div>
+                        <figcaption>
+                            Figure 4. NYC Taxi Reveneue & Trip Comparision Dashboard 
+                        </figcaption>
+                    </figure>
+                    <p>
+                        The Revenue and Trips Comparison Dashboard enables side-by-side analysis of how taxi demand and earnings evolve 
+                        across different time frames — comparing the <strong>current year vs. previous year</strong> 
+                        and the <strong>current week vs. previous week</strong>. 
+                        This helps identify whether business performance is improving, stable, or declining.
+                      </p>
+                    
+                      <ul>
+                        <li><strong>Yearly Comparison:</strong> 
+                          The upper charts compare <strong>trip volume</strong> and <strong>total revenue</strong> over each fiscal week. 
+                          They reveal how seasonal peaks and dips shift from year to year, helping detect long-term growth or slowdown in demand.
+                        </li>
+                        <li><strong>Weekly Comparison:</strong> 
+                          The lower charts compare the current week’s daily performance against the same week in the previous year. 
+                          This highlights short-term operational efficiency — for example, whether more trips or higher fares occurred this week.
+                        </li>
+                        <li><strong>Key Metrics Displayed:</strong> 
+                          <ul>
+                            <li><strong>$49M</strong> Total Revenue (analysis period)</li>
+                            <li><strong>72%</strong> of revenue from <strong>credit card</strong> payments</li>
+                            <li><strong>28%</strong> from <strong>cash</strong> payments</li>
+                            <li><strong>0.13%</strong> Disputed or Unknown transactions</li>
+                          </ul>
+                        </li>
+                        <li><strong>Visual Indicators:</strong> 
+                          Green and yellow lines represent <strong>Trips</strong> and <strong>Revenue</strong> trends respectively, 
+                          allowing quick detection of when trip activity and revenue diverge — a useful cue for pricing or service adjustments.
+                        </li>
+                      </ul>
+                    
+                    <h4>How This Dashboard Works</h4>
+                      <p>
+                        This page dynamically updates based on the selected <strong>Fiscal Year</strong> and <strong>Fiscal Week</strong> filters. 
+                        By switching these slicers, analysts can instantly observe year-over-year or week-over-week shifts in both trip counts 
+                        and total revenue. 
+                      </p>
+                      <p>
+                        In practical use, managers can quickly check whether operational changes (such as new pricing, driver incentives, 
+                        or marketing campaigns) have a measurable impact on performance compared to the same period in the past.
+                      </p>
+                    
+                      <h4>Actionable Insights</h4>
+                      <ul>
+                        <li><strong>Trend Monitoring:</strong> Detect early signs of performance dips or surges across weeks and years.</li>
+                        <li><strong>Performance Benchmarking:</strong> Track whether total revenue and trip counts are improving 
+                            relative to previous time frames.</li>
+                        <li><strong>Operational Decisions:</strong> Allocate resources or adjust pricing strategies if weekly or yearly gaps widen.</li>
+                        <li><strong>Data-driven Evaluation:</strong> Use these comparisons to assess the success of recent policy or route changes.</li>
+                      </ul>
+                </section>
+
+
+                <h2>Outcome</h2>
+                <p>
+                    This project successfully delivers a fully automated <strong>NYC Taxi Analytics Dashboard</strong> that connects 
+                    data ingestion, transformation, and visualization into a single streamlined workflow. 
+                    Using <strong>AWS S3</strong> for storage, <strong>Amazon Redshift Spectrum</strong> for querying, 
+                    <strong>dbt</strong> for data modeling, and <strong>Power BI</strong> for visualization, 
+                    the entire pipeline allows real-time insights into trip demand, revenue trends, and geographic patterns.
+                  </p>
+                
+                  <p>
+                    The interactive dashboards — including <strong>Overview</strong>, <strong>Revenue</strong>, 
+                    <strong>Zone Analysis</strong>, and <strong>Revenue & Trips Comparison</strong> — make it easy for 
+                    non-technical users to explore data intuitively. 
+                    Through these views, decision-makers can quickly identify when, where, and how revenue is generated, 
+                    which areas perform best, and how trends evolve across weeks and years.
+                  </p>
+                
+                  <p>
+                    From a business perspective, the analysis provides <strong>actionable insights</strong> such as optimizing 
+                    driver allocation during peak mid-week periods, focusing operations around high-demand zones like 
+                    <strong>Manhattan</strong> and <strong>East Harlem</strong>, and promoting digital payments to align with 
+                    customer preferences. 
+                    These insights support data-driven planning, cost efficiency, and improved service reliability across the city’s taxi network.
+                  </p>
+                
+                  <p>
+                    Overall, this project demonstrates how cloud-based data engineering and BI tools can transform raw trip data into 
+                    valuable, decision-ready intelligence — bridging the gap between technical analytics and practical business outcomes.
+                  </p>
+        </section>            
