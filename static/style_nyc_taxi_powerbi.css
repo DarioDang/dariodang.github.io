@@ -1,0 +1,178 @@
+/* 🔥 NYC Power BI Section */
+.project-detail-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.project-detail-section ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.project-detail-section h2 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-link {
+    color: inherit;             /* Use the default text color */
+    text-decoration: none;     /* Remove underline */
+    font-weight: bold;         /* Optional: keep it bold */
+}
+
+.project-link:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+    color: inherit;             /* Prevent hover color change */
+}
+
+/* Author Section */
+.author-info {
+    text-align: right;
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+/* Background Section */
+.body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 80px auto 0; /* top padding for fixed navbar */
+    padding: 40px 20px;
+
+    /* Background image setup */
+    background-image: url('/static/image/nyc_powerbi_project/background.jpg');
+    background-size: cover;          /* Make it cover the entire area */
+    background-position: center;     /* Center the image */
+    background-attachment: fixed;    /* Optional: parallax effect */
+
+    position: relative;              /* Needed for overlay positioning */
+}
+
+/* Transparent overlay */
+.body::before {
+    content: "";
+    position: fixed;      /* Stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7); /* White overlay, 70% opacity */
+    z-index: -1;          /* Keep it behind the text */
+}
+
+/* Transparent navbar only for pages with class="body" */
+.body .topnav {
+    background: transparent;
+    backdrop-filter: blur(6px);           /* frosted glass effect */
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+
+/* Image Section */
+.figure-card {
+    max-width: 980px;                /* similar width */
+    margin: 24px auto;
+    padding: 14px;                   /* outer light frame space */
+    background: linear-gradient(#f4f6f8, #eff2f5); /* soft grey frame */
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.10);
+}
+  
+
+.figure-card .figure-inner {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.04); /* subtle inner line */
+}
+  
+
+.figure-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+  
+
+.figure-card figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #333;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,.08);       /* faint separator like the screenshot */
+}
+
+.table-card figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #333;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,.08);
+  }
+  
+
+@media (max-width: 640px) {
+    .figure-card { padding: 10px; border-radius: 12px; }
+    .figure-card .figure-inner { padding: 12px; }
+}
+
+/* Justify text in paragraphs */
+p {
+    text-align: justify;
+  }
+
+
+/* ==============================
+   Dashboard View Styling
+ ============================== */
+.dashboard-view {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #f9fafb, #f1f3f6);
+    border-radius: 18px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+  
+.dashboard-view h2 {
+    text-align: center;
+    font-size: 1.9rem;
+    color: #222;
+    margin-bottom: 1.2rem;
+}
+  
+.dashboard-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%;  /* controls aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+  
+.dashboard-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 14px;
+}
+  
+.dashboard-note {
+    text-align: center;
+    font-style: italic;
+    color: #444;
+    margin-top: 12px;
+}
+  
