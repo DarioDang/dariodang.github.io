@@ -66,7 +66,7 @@
 </head>
 <body>
 
-  <!-- ✅ Reusable Top Navbar -->
+  <!-- Reusable Top Navbar -->
   <nav class="topnav">
     <a href="/">Home</a>
     <a href="/#about">About</a>
@@ -78,7 +78,7 @@
     <a href="/static/files/Dario_CV.pdf" download>MyCV</a>
   </nav>
 
-  <!-- ✅ Page Content -->
+  <!-- Page Content -->
   <div class="content">
 
     <div class="slideshow-container" aria-label="Hero slideshow">
@@ -111,24 +111,24 @@
     <a class="next" onclick="plusSlides(1)" aria-label="Next slide">❯</a>
   </div>
 
-  <!-- 🔘 Dot indicators -->
+  <!-- Dot indicators -->
   <div class="dot-container" aria-label="Slideshow navigation">
     <span class="dot" onclick="currentSlide(1)" aria-label="Slide 1"></span>
     <span class="dot" onclick="currentSlide(2)" aria-label="Slide 2"></span>
     <span class="dot" onclick="currentSlide(3)" aria-label="Slide 3"></span>
   </div>
 
-  <!-- 📌 Projects Section -->
+  <!-- Projects Section -->
   <section class="projects-section fade-in-up" id="projects">
     <h2 class="section-title">Some Things I'm Interested In</h2>
     <div class="underline"></div>
   </section>
 
-  <!-- 📌 Projects Grid -->
+  <!-- Projects Grid -->
   <div class="projects-grid">
     <div class="project-card">
       <img src="/static/image/project_section/project10.jpg" alt="Electronic Retail Dashboard" loading="lazy">
-      <h3><a href="https://digital-retail-dashboard.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer">Retail Dashboard</a></h3>
+      <h3><a href="https://retail-price-intelligence.netlify.app/" class="project-link" target="_blank" rel="noopener noreferrer">Retail Dashboard</a></h3>
       <p>Daily price intelligence pipeline for NZ electronics market. Ingest and automate daily at 8pm NZT.</p>
     </div>
 
@@ -187,7 +187,7 @@
     </div>
   </div>
 
-  <!-- 📌 About Me Section -->
+  <!-- About Me Section -->
   <section class="about-section fade-in-up" id="about">
     <h2 class="section-title">About Me</h2>
     <div class="underline"></div>
@@ -212,7 +212,7 @@
     </div>
   </section>
 
-  <!-- 📌 Certificates Section -->
+  <!-- Certificates Section -->
   <section class="certificates-section" id="certificates">
     <div class="fade-in-up">
       <h2 class="section-title">Courses & Certificates</h2>
@@ -270,7 +270,7 @@
     </div>
   </section>
 
-  <!-- 📌 Extracurricular Activities Section -->
+  <!-- Extracurricular Activities Section -->
   <section class="activities-section" id="activities">
     <h2 class="section-title">Extracurricular Activities</h2>
     <div class="underline"></div>
@@ -328,7 +328,7 @@
     activityCards.forEach(card => observer.observe(card));
   </script>
 
-  <!-- ✅ Slideshow Script (runs AFTER content loads) -->
+  <!-- Slideshow Script (runs AFTER content loads) -->
   <script>
     let current = 0;
     let slides = [];
@@ -416,7 +416,7 @@
     function resumeAutoSlide() { isPaused = false; }
   </script>
 
-  <!-- ✅ Fade-in + carousel scripts unchanged -->
+  <!-- Fade-in + carousel scripts unchanged -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const fadeElements = document.querySelectorAll('.fade-in-up');
