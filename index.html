@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="sCZGkTRr8p6ztURUOewLmS4a5D6Uu4ezDR2zpQFys2Q" />
- 
+
   <!-- ═══ Primary SEO ═══ -->
   <title>Dario Dang | Data Scientist — Auckland, New Zealand</title>
   <meta name="description" content="Dario Dang is a Data Scientist based in Auckland, NZ. Specialising in end-to-end ML pipelines, geospatial analysis, MLOps, PySpark, and real-time analytics. Open to Data Scientist and Data Analyst roles in New Zealand.">
@@ -13,7 +13,7 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#050c1a">
   <link rel="canonical" href="https://dariodang.github.io/">
- 
+
   <!-- ═══ Open Graph (LinkedIn, Facebook, Slack previews) ═══ -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Dario Dang Portfolio">
@@ -25,7 +25,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Dario Dang — Data Scientist Portfolio">
   <meta property="og:locale" content="en_NZ">
- 
+
   <!-- ═══ Twitter / X Card ═══ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@DarioDang">
@@ -34,17 +34,17 @@
   <meta name="twitter:description" content="Data Scientist specialising in ML pipelines, geospatial models, and real-time analytics. Open to roles in New Zealand.">
   <meta name="twitter:image" content="https://dariodang.github.io/static/image/cover_section/slide7.jpg">
   <meta name="twitter:image:alt" content="Dario Dang — Data Scientist Portfolio">
- 
+
   <!-- ═══ Favicon ═══ -->
   <link rel="icon" href="/static/image/icon/portfolio.png" type="image/png">
   <link rel="apple-touch-icon" href="/static/image/icon/portfolio.png">
- 
+
   <!-- ═══ Performance ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/style.css">
- 
+
   <!-- ═══ Structured Data — Person ═══ -->
   <script type="application/ld+json">
   {
@@ -74,7 +74,7 @@
     ]
   }
   </script>
- 
+
   <!-- ═══ Structured Data — Website ═══ -->
   <script type="application/ld+json">
   {
@@ -101,6 +101,24 @@
 <body>
 
   <!-- ===================== NAVBAR ===================== -->
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile nav drawer -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#certificates" class="mobile-nav-link">Certificates</a>
+    <a href="#activities" class="mobile-nav-link">Activities</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <div class="mobile-nav-footer">
+      <a href="https://github.com/DarioDang" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/dario-dang-89049020a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/static/files/Dario_CV.pdf" download>Download CV</a>
+    </div>
+  </nav>
+
   <nav class="topnav" id="topnav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">DD</a>
@@ -120,6 +138,10 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
         <a href="/static/files/Dario_CV.pdf" download class="btn-cv">Download CV</a>
+        <!-- Hamburger (visible on mobile only) -->
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
@@ -173,7 +195,7 @@
         <div class="skill-group">
           <h4>ML &amp; Data</h4>
           <div class="skill-tags">
-            <span>scikit-learn</span><span>PySpark</span><span>MLflow</span><span>XGBoost</span><span>K-Means</span><span>Sk-Learn</span>
+            <span>scikit-learn</span><span>PySpark</span><span>MLflow</span><span>XGBoost</span><span>K-Means</span>
           </div>
         </div>
         <div class="skill-group">
@@ -212,7 +234,7 @@
       <div class="section-header reveal">
         <h2 class="section-title">Projects</h2>
         <div class="underline"></div>
-        <p class="section-sub">A selection of data science projects from live dashboards to ML pipelines.</p>
+        <p class="section-sub">A selection of data science projects — from live dashboards to ML pipelines.</p>
       </div>
     </section>
 
@@ -247,7 +269,7 @@
         <a href="https://chc-restaurants-reviews.streamlit.app/" class="project-overlay" target="_blank" rel="noopener noreferrer"><span>View Live ↗</span></a>
       </div>
       <div class="project-body">
-        <div class="project-tags"><span>RAG</span><span>LLM</span><span>Streamlit</span><span>LLM Evaluate</span></div>
+        <div class="project-tags"><span>RAG</span><span>LLM</span><span>Streamlit</span></div>
         <h3><a href="https://chc-restaurants-reviews.streamlit.app/" target="_blank" rel="noopener noreferrer">Christchurch FoodieBot</a></h3>
         <p>RAG-powered chatbot over Google &amp; Yelp reviews — answers natural language questions about 100+ Christchurch restaurants.</p>
       </div>
@@ -283,7 +305,7 @@
         <a href="projects/geospatial_crash.html" class="project-overlay"><span>View Project ↗</span></a>
       </div>
       <div class="project-body">
-        <div class="project-tags"><span>Geospatial</span><span>ML</span><span>GeoPandas</span></div>
+        <div class="project-tags"><span>Geospatial</span><span>DBSCAN</span><span>GeoPandas</span></div>
         <h3><a href="projects/geospatial_crash.html">Geospatial Crash Modelling</a></h3>
         <p>Spatial clustering and hotspot analysis on NZ road crash data using GeoPandas, DBSCAN, and interactive Folium maps.</p>
       </div>
@@ -364,7 +386,7 @@
       </div>
       <div class="about-text">
         <p>I'm <strong>Dario Dang</strong>, a Data Scientist based in Auckland, NZ with a <strong>Master of Applied Data Science</strong> from the University of Canterbury. I bring a strong foundation in statistics, machine learning, and software engineering to every project I work on.</p>
-        <p>My work spans the full data lifecycle from ingesting and transforming raw data to building production-grade ML models, geospatial pipelines, and real-time analytics systems. I care about solutions that are not just accurate, but scalable, reproducible, and interpretable.</p>
+        <p>My work spans the full data lifecycle — from ingesting and transforming raw data to building production-grade ML models, geospatial pipelines, and real-time analytics systems. I care about solutions that are not just accurate, but scalable, reproducible, and interpretable.</p>
         <p>I'm actively seeking <strong>Data Scientist</strong> and <strong>Data Analyst</strong> opportunities in New Zealand where I can contribute to meaningful, data-driven decisions. I thrive in collaborative environments and enjoy turning complex problems into clear, actionable insights.</p>
       </div>
     </div>
@@ -387,15 +409,15 @@
       </a>
       <a href="certificates/cert3.html" class="cert-card">
         <img src="/static/image/certificate_section/cert2.jpg" alt="Machine Learning for Data Analytics" loading="lazy">
-        <div class="cert-info"><span class="cert-name">Machine Learning for Data Analytics</span><span class="cert-issuer">University of Science</span></div>
+        <div class="cert-info"><span class="cert-name">Machine Learning for Data Analytics</span><span class="cert-issuer">Coursera</span></div>
       </a>
       <a href="certificates/cert4.html" class="cert-card">
         <img src="/static/image/certificate_section/cert3.jpg" alt="Python for Data Analytics" loading="lazy">
-        <div class="cert-info"><span class="cert-name">Python for Data Analytics</span><span class="cert-issuer">University of Science</span></div>
+        <div class="cert-info"><span class="cert-name">Python for Data Analytics</span><span class="cert-issuer">Coursera</span></div>
       </a>
       <a href="certificates/cert5.html" class="cert-card">
         <img src="/static/image/certificate_section/cert4.jpg" alt="SQL for Data Analytics" loading="lazy">
-        <div class="cert-info"><span class="cert-name">SQL for Data Analytics</span><span class="cert-issuer">University of Science</span></div>
+        <div class="cert-info"><span class="cert-name">SQL for Data Analytics</span><span class="cert-issuer">Coursera</span></div>
       </a>
       <a href="certificates/cert6.html" class="cert-card">
         <img src="/static/image/certificate_section/cert5.jpg" alt="Feature Manipulation Engine (FME)" loading="lazy">
@@ -447,8 +469,8 @@
     <div class="contact-inner">
       <h2 class="contact-title">Get In Touch</h2>
       <p class="contact-desc">
-        I'm currently open to Data Specialist and Analyst roles in New Zealand.<br>
-        Whether it's a role, a project, or just a chat, feel free to reach out.
+        I'm currently open to Data Scientist and Analyst roles in New Zealand.<br>
+        Whether it's a role, a project, or just a chat — feel free to reach out.
       </p>
       <a href="mailto:dariodang9999@gmail.com" class="btn-contact"><span>Say Hello <span class="wave-emoji">👋</span></span></a>
       <div class="contact-links">
@@ -470,7 +492,7 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
-    <p>© 2026 Dario Portfolio</p>
+    <p>Designed &amp; built by Dario Dang &nbsp;·&nbsp; Auckland, NZ</p>
   </footer>
 
   <script>
@@ -733,6 +755,37 @@
       container.appendChild(el);
     }
   })();
+
+  /* ---- Hamburger menu ---- */
+  const hamburger = document.getElementById('nav-hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  const overlay   = document.getElementById('mobile-overlay');
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    mobileNav.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    overlay.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
 
   </script>
 </body>
