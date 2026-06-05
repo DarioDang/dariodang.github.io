@@ -195,6 +195,7 @@ a { text-decoration: none; }
   height: 100%;
   pointer-events: none;
   z-index: 0;
+  will-change: contents;
 }
 
 /* Animated gradient mesh */
@@ -504,6 +505,7 @@ a { text-decoration: none; }
   background: var(--navy-mid);
   position: relative;
   overflow: hidden;
+  contain: layout style;
 }
 
 /* Animated aurora blobs */
@@ -716,6 +718,7 @@ a { text-decoration: none; }
   background: var(--navy);
   position: relative;
   overflow: hidden;
+  contain: layout style;
 }
 
 /* Animated diagonal beam sweep */
@@ -804,7 +807,7 @@ a { text-decoration: none; }
 
 /* Glassmorphism card */
 .project-card {
-  background: rgba(255,255,255,0.04);
+  background: rgba(15,25,45,0.75);
   border: 1px solid rgba(79,168,255,0.13);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -817,8 +820,7 @@ a { text-decoration: none; }
     border-color 0.35s ease,
     background 0.35s ease;
   position: relative;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  will-change: transform, opacity;
 }
 
 .project-card.visible {
@@ -908,7 +910,6 @@ a { text-decoration: none; }
   padding: 9px 22px;
   border-radius: var(--radius-sm);
   transition: background 0.2s, border-color 0.2s, color 0.2s;
-  backdrop-filter: blur(6px);
 }
 .project-overlay span:hover {
   background: rgba(79,168,255,0.25);
@@ -967,7 +968,7 @@ a { text-decoration: none; }
   padding: 7rem 2rem;
   background:
     linear-gradient(160deg, rgba(240,244,255,0.92) 0%, rgba(247,249,252,0.88) 40%, rgba(240,247,255,0.92) 100%),
-    url('/static/image/about_section/background.jpg') center/cover no-repeat fixed;
+    url('/static/image/about_section/background.jpg') center/cover no-repeat scroll;
   position: relative;
   overflow: hidden;
 }
@@ -1094,7 +1095,7 @@ a { text-decoration: none; }
   padding: 7rem 2rem;
   background:
     linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
-    url('/static/image/certificate_section/background.jpg') center/cover no-repeat fixed;
+    url('/static/image/certificate_section/background.jpg') center/cover no-repeat scroll;
   position: relative;
 }
 
