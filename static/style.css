@@ -1,5 +1,5 @@
 /* =============================================
-   DARIO DANG — PORTFOLIO STYLESHEET 
+   DARIO DANG — PORTFOLIO STYLESHEET
    Enhanced with animations, backgrounds, effects
    ============================================= */
 
@@ -361,8 +361,11 @@ a { text-decoration: none; }
 
 .hero-scroll-hint {
   position: absolute;
-  bottom: 2.5rem; left: 50%;
-  transform: translateX(-50%);
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
