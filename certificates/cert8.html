@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Engineer Zoomcamp Certificate</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+
+        .no-save {
+            -webkit-user-drag: none;
+            user-select: none;
+        }
+
+        .certificate-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-container img.logo {
+            max-width: 180px;
+            margin-bottom: 25px;
+        }
+
+        .certificate-container img.certificate {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            text-align: left;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .module-card {
+            background: #f4f7fb;
+            border: 1px solid #dde3ec;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .module-card .module-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #4fa8ff;
+            margin-bottom: 5px;
+        }
+
+        .module-card .module-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #0f1e35;
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+
+        .module-card ul {
+            margin: 0;
+            padding-left: 16px;
+            font-size: 0.8rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #1a252f;
+        }
+    </style>
+</head>
+<script>
+    document.addEventListener('contextmenu', (e) => {
+      if (e.target.closest('.no-save')) e.preventDefault();
+    });
+    document.addEventListener('dragstart', (e) => {
+      if (e.target.closest('.no-save')) e.preventDefault();
+    });
+</script>
+<body>
+    <div class="certificate-container">
+
+        <!-- DataTalks.Club Logo -->
+        <img src="/static/image/certificate_section/DataTalksClub_Logo.png"
+             alt="DataTalks.Club Logo" class="logo">
+
+        <!-- Certificate Image -->
+        <img src="/static/image/certificate_section/de_zoomcamp.png"
+             alt="Data Engineer Zoomcamp Certificate"
+             class="certificate no-save"
+             draggable="false"
+             oncontextmenu="return false;">
+
+        <!-- Title -->
+        <h1>Data Engineering Zoomcamp</h1>
+
+        <!-- Description -->
+        <p>
+            The Data Engineering Zoomcamp, offered by DataTalks.Club, is a comprehensive
+            hands-on program covering the full data engineering lifecycle — from containerisation
+            and infrastructure provisioning to batch processing, streaming, and analytics
+            engineering. The curriculum is structured around real-world tools and cloud-native
+            workflows used in modern data teams.
+        </p>
+        <p>
+            Participants build end-to-end data pipelines using industry-standard technologies,
+            gaining practical experience with orchestration, data warehousing, transformation,
+            and distributed processing — preparing graduates to design and maintain
+            production-grade data infrastructure.
+        </p>
+
+        <!-- Modules -->
+        <h2>Course Modules</h2>
+        <div class="modules-grid">
+
+            <div class="module-card">
+                <div class="module-label">Module 1</div>
+                <div class="module-title">Containerisation & Infrastructure as Code</div>
+                <ul>
+                    <li>Docker & Docker Compose</li>
+                    <li>PostgreSQL with Docker</li>
+                    <li>Terraform on GCP</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-label">Module 2</div>
+                <div class="module-title">Workflow Orchestration</div>
+                <ul>
+                    <li>Data Lakes overview</li>
+                    <li>Orchestration with Kestra</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-label">Workshop 1</div>
+                <div class="module-title">Data Ingestion</div>
+                <ul>
+                    <li>API reading & pipeline scalability</li>
+                    <li>Incremental loading with dlt</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-label">Module 3</div>
+                <div class="module-title">Data Warehousing</div>
+                <ul>
+                    <li>BigQuery fundamentals</li>
+                    <li>Partitioning & clustering</li>
+                    <li>ML in BigQuery</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-label">Module 4</div>
+                <div class="module-title">Analytics Engineering</div>
+                <ul>
+                    <li>dbt with DuckDB & BigQuery</li>
+                    <li>Testing & documentation</li>
+                    <li>Deployment pipelines</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-label">Module 5</div>
+                <div class="module-title">Data Platforms</div>
+                <ul>
+                    <li>End-to-end pipelines with Bruin</li>
+                    <li>Data quality & transformation</li>
+                    <li>Cloud deployment to BigQuery</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-label">Module 6</div>
+                <div class="module-title">Batch Processing</div>
+                <ul>
+                    <li>Apache Spark & DataFrames</li>
+                    <li>SQL with Spark</li>
+                    <li>GroupBy & Joins internals</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <div class="module-label">Module 7</div>
+                <div class="module-title">Streaming</div>
+                <ul>
+                    <li>Apache Kafka fundamentals</li>
+                    <li>Kafka Streams & KSQL</li>
+                    <li>Schema management with Avro</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Back Link -->
+        <a href="/#certificates" class="back-button">← Back to Certificates</a>
+
+    </div>
+</body>
+</html>
