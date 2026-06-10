@@ -1,4 +1,5 @@
 # Ignore all .DS_Store files (macOS metadata)
 .DS_Store
 static/.DS_Store
-static/image/.DS_Store
+static/image/.DS_Store.
+command-script-local-test.txt
