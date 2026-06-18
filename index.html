@@ -43,6 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="/static/style.css">
 
   <!-- ═══ Structured Data — Person ═══ -->
@@ -117,7 +118,7 @@
 
   <nav class="topnav" id="topnav">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">DD</a>
+      <a href="/" class="nav-logo">Dario<span style="color: var(--accent);">.</span></a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -134,7 +135,9 @@
         <a href="https://www.linkedin.com/in/dario-dang-89049020a/" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="/static/files/Dario_CV.pdf" download class="btn-cv">Download CV</a>
+        <a href="/cv.html" target="_blank" rel="noopener" class="nav-icon" aria-label="View CV">
+          <img src="/static/image/icon/cv-icon.png" alt="CV" style="width:20px;height:20px;object-fit:contain;filter:brightness(0.6) invert(0.4);">
+        </a>
         <!-- Hamburger (visible on mobile only) -->
         <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -156,11 +159,12 @@
       <h1 class="hero-name">Dario Dang</h1>
       <p class="hero-title">Data Scientist</p>
       <p class="hero-desc">
-        Building end-to-end ML pipelines, geospatial models,<br>
-        and real-time analytics systems with Python, PySpark &amp; SQL.
+        Building end-to-end ML & DE pipelines, data analysis,<br>
+        and real-time analytics systems with Python, R &amp; SQL.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="/cv.html" target="_blank" rel="noopener" class="btn-cv-hero">MyCV</a>
         <a href="#contact" class="btn-outline">Get in Touch</a>
       </div>
     </div>
@@ -172,49 +176,92 @@
 
   <!-- ===================== SKILLS ===================== -->
   <div class="skills-section-wrapper" id="skills">
-    <div class="skills-floaters" id="skills-floaters"></div>
-    <div class="skills-glow"></div>
-
     <section class="skills-section reveal">
       <div class="section-header reveal">
         <h2 class="section-title">Tech Stack</h2>
         <div class="underline"></div>
       </div>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h4>Languages</h4>
-          <div class="skill-tags">
-            <span>Python</span><span>SQL</span><span>R</span><span>Javascript</span><span>HTML</span><span>CSS</span>
+
+      <div class="ts-body">
+
+        <div class="ts-row">
+          <div class="ts-cat-label">Languages</div>
+          <div class="ts-pills">
+            <span class="ts-pill"><img src="/static/image/icon/python-icon.png" alt="python" class="ts-icon">Python</span>
+            <span class="ts-pill"><i class="devicon-azuresqldatabase-plain colored"></i></i>SQL</span>
+            <span class="ts-pill"><img src="/static/image/icon/r-icon.png" alt="R" class="ts-icon"></span>
+            <span class="ts-pill"><i class="devicon-javascript-plain colored"></i></i>JavaScript</span>
+            <span class="ts-pill"><i class="devicon-htmx-plain colored"></i></i>HTML</span>
+            <span class="ts-pill"><i class="devicon-css3-plain colored"></i></i>CSS</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4>ML &amp; Data</h4>
-          <div class="skill-tags">
-            <span>scikit-learn</span><span>PySpark</span><span>MLflow</span><span>XGBoost</span><span>K-Means</span>
+
+        <div class="ts-divider"></div>
+
+        <div class="ts-row">
+          <div class="ts-cat-label">ML &amp; Data</div>
+          <div class="ts-pills">
+            <span class="ts-pill"><i class="devicon-jupyter-plain colored"></i></i>Jupyter</span>
+            <span class="ts-pill"><i class="devicon-scikitlearn-plain colored"></i></i>Scikit-learn</span>
+            <span class="ts-pill"><i class="devicon-apachespark-original colored"></i></i>PySpark</span>
+            <span class="ts-pill"><img src="/static/image/icon/mlflow-icon.png" alt="mlflow" class="ts-icon">MLflow</span>
+            <span class="ts-pill"><img src="/static/image/icon/xgb-icon.png" alt="xgboost" class="ts-icon">XGBoost</span>
+            <span class="ts-pill"><img src="/static/image/icon/kmeans-icon.png" alt="kmeans" class="ts-icon">K-Means</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4>Cloud &amp; Infra</h4>
-          <div class="skill-tags">
-            <span>AWS Redshift</span><span>AWS S3</span><span>AWS RDS</span><span>dbt</span><span>Docker</span><span>Prefect</span><span>PgAdmin</span><span>Postgres</span>
+
+        <div class="ts-divider"></div>
+
+        <div class="ts-row">
+          <div class="ts-cat-label">Cloud &amp; Infra</div>
+          <div class="ts-pills">
+            <span class="ts-pill"><img src="/static/image/icon/redshift-icon.png" alt="redshift" class="ts-icon">AWS Redshift</span>
+            <span class="ts-pill"><img src="/static/image/icon/s3-icon.png" alt="s3" class="ts-icon">AWS S3</span>
+            <span class="ts-pill"><img src="/static/image/icon/rds-icon.png" alt="rds" class="ts-icon">AWS RDS</span>
+            <span class="ts-pill"><img src="/static/image/icon/dbt-icon.png" alt="dbt" class="ts-icon">dbt</span>
+            <span class="ts-pill"><i class="devicon-docker-plain colored"></i>Docker</span>
+            <span class="ts-pill"><img src="/static/image/icon/prefect-icon.png" alt="prefect" class="ts-icon">Prefect</span>
+            <span class="ts-pill"><i class="devicon-postgresql-plain colored"></i></i>PgAdmin</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4>Visualisation</h4>
-          <div class="skill-tags">
-            <span>Matplotlib</span><span>Seaborn</span><span>Grafana</span><span>Power BI</span><span>Streamlit</span><span>Plotly</span>
+
+        <div class="ts-divider"></div>
+
+        <div class="ts-row">
+          <div class="ts-cat-label">Visualisation</div>
+          <div class="ts-pills">
+            <span class="ts-pill"><img src="/static/image/icon/matplotlib-icon.png" alt="matplotlib" class="ts-icon">Matplotlib</span>
+            <span class="ts-pill"><img src="/static/image/icon/seaborn-icon.svg" alt="seaborn" class="ts-icon">Seaborn</span>
+            <span class="ts-pill"><i class="devicon-grafana-plain colored"></i>Grafana</span>
+            <span class="ts-pill"><img src="/static/image/icon/powerbi-icon.jpeg" alt="powerbi" class="ts-icon">Power BI</span>
+            <span class="ts-pill"><i class="devicon-streamlit-plain colored"></i>Streamlit</span>
+            <span class="ts-pill"><i class="devicon-plotly-plain colored"></i>Plotly</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4>Geospatial</h4>
-          <div class="skill-tags">
-            <span>GeoPandas</span><span>QGIS</span><span>FME</span><span>ARCGIS</span>
+
+        <div class="ts-divider"></div>
+
+        <div class="ts-row">
+          <div class="ts-cat-label">Geospatial</div>
+          <div class="ts-pills">
+            <span class="ts-pill"><img src="/static/image/icon/geopandas-icon.png" alt="geopandas" class="ts-icon">GeoPandas</span>
+            <span class="ts-pill"><img src="/static/image/icon/qgis-icon.png" alt="qgis" class="ts-icon">QGIS</span>
+            <span class="ts-pill"><img src="/static/image/icon/fme-icon.png" alt="fme" class="ts-icon">FME</span>
+            <span class="ts-pill"><img src="/static/image/icon/arcgis-icon.png" alt="arcgis" class="ts-icon">ArcGIS</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4>Other</h4>
-          <div class="skill-tags">
-            <span>Git</span><span>RAG / LLMs</span><span>SAP</span><span>SEO</span>
+
+        <div class="ts-divider"></div>
+
+        <div class="ts-row">
+          <div class="ts-cat-label">Other</div>
+          <div class="ts-pills">
+            <span class="ts-pill"><i class="devicon-fastapi-plain colored"></i>FastAPI</span>
+            <span class="ts-pill"><i class="devicon-github-original colored"></i>Git</span>
+            <span class="ts-pill"><img src="/static/image/icon/rag-icon.jpg" alt="rag" class="ts-icon">RAG / LLMs</span>
+            <span class="ts-pill"><img src="/static/image/icon/sap-icon.png" alt="sap" class="ts-icon">SAP</span>
+            <span class="ts-pill"><img src="/static/image/icon/seo-icon.png" alt="seo" class="ts-icon">SEO</span>
+            <span class="ts-pill"><img src="/static/image/icon/googleanalytics-icon.png" alt="ga" class="ts-icon">GA</span>
           </div>
         </div>
       </div>
@@ -378,6 +425,7 @@
 
   <!-- ===================== EXPERIENCE & EDUCATION ===================== -->
   <section class="timeline-section" id="experience">
+    <div class="timeline-blob"></div> 
     <div class="section-header reveal">
       <h2 class="section-title">Experiences &amp; Educations</h2>
       <div class="underline"></div>
@@ -786,21 +834,6 @@
       card.addEventListener('mouseleave', () => { card.style.transform = ''; card.style.transition = ''; });
     });
   }
-
-  /* ---- Floating code symbols in skills bg ---- */
-  (function() {
-    const container = document.getElementById('skills-floaters');
-    if (!container) return;
-    const symbols = ['import pandas as pd','def train_model():','SELECT * FROM','sklearn.fit(X)','RMSE: 0.042','df.groupby()','MLflow.log','git commit -m','docker run','spark.read.csv','K=5 clusters','model.predict()','accuracy: 94%','geopy.distance','pd.DataFrame()','XGBoost()','pipeline.fit()','dbt run','aws s3 cp','folium.Map()','DBSCAN(eps=0.5)','cross_val_score'];
-    const count = window.innerWidth < 768 ? 10 : 18;
-    for (let i = 0; i < count; i++) {
-      const el = document.createElement('span');
-      el.textContent = symbols[i % symbols.length];
-      const dur = 18 + Math.random()*20;
-      el.style.cssText = `left:${Math.random()*90}%;bottom:-40px;font-size:${0.65+Math.random()*0.3}rem;animation-duration:${dur}s;animation-delay:${-(Math.random()*dur)}s;`;
-      container.appendChild(el);
-    }
-  })();
 
   /* ---- Hamburger menu ---- */
   const hamburger = document.getElementById('nav-hamburger');
