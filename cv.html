@@ -98,6 +98,20 @@
   }
   .btn-ghost:hover { border-color: var(--accent); transform: translateY(-1px); }
 
+  .btn-download {
+  padding: 0.75rem 1.75rem; border-radius: 8px;
+  background: transparent; color: var(--accent2);
+  border: 1px solid rgba(0,212,170,0.35);
+  font-weight: 600; font-size: 0.9rem; cursor: pointer;
+  text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  }
+
+  .btn-download:hover {
+    border-color: var(--accent2);
+    background: rgba(0,212,170,0.08);
+    transform: translateY(-1px);
+  }
+
   /* STATS ROW */
   .stats {
     display: flex; gap: 2rem; margin-top: 3.5rem;
@@ -229,6 +243,7 @@
     <div class="hero-cta">
       <a href="#experience" class="btn-primary">View Experience</a>
       <a href="mailto:DarioDang9999@gmail.com" class="btn-ghost">Get in Touch</a>
+      <a href="/static/files/Dario_CV.pdf" download class="btn-download">Download CV ↓</a>
     </div>
     <div class="stats">
       <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Years Experience</div></div>
