@@ -146,6 +146,14 @@ a { text-decoration: none; }
 }
 .nav-icon:hover { color: var(--accent); background: rgba(79,168,255,0.1); }
 
+.gmail-icon {
+  filter: grayscale(1) brightness(1.6);
+  transition: filter 0.2s;
+}
+.nav-icon:hover .gmail-icon {
+  filter: grayscale(0) brightness(1);
+}
+
 .btn-cv-hero {
   padding: 13px 30px;
   border: 1px solid rgba(0,212,170,0.35);
